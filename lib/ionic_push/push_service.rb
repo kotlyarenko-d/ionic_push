@@ -16,6 +16,10 @@ module IonicPush
       self.class.post("/api/v1/push", payload)
     end
 
+    def check_status
+      self.class.post("/api/v1/status", payload)
+    end
+
     def alert!(msg)
       notify do
         {
