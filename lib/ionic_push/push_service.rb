@@ -17,7 +17,7 @@ module IonicPush
     end
 
     def check_status(message_id)
-      self.class.post("/api/v1/status/#{message_id}", payload)
+      self.class.get("/api/v1/status/#{message_id}", payload)
     end
 
     def alert!(msg)
