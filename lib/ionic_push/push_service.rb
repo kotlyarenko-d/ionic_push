@@ -1,7 +1,6 @@
 module IonicPush
   class PushService
     include HTTParty
-    debug_output $stdout
 
     base_uri IonicPush.ionic_api_url
 
