@@ -1,6 +1,8 @@
 module IonicPush
   class PushService
     include HTTParty
+    debug_output $stdout
+
     base_uri IonicPush.ionic_api_url
 
     attr_accessor :device_tokens, :message
@@ -17,7 +19,7 @@ module IonicPush
     end
 
     def check_status(message_id)
-      self.class.get("#{message_id}/messages", payload)
+      self.class.get("/#{message_id}/messages", payload)
     end
 
     def alert!(msg)
