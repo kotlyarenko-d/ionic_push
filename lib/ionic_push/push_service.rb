@@ -18,7 +18,7 @@ module IonicPush
     end
 
     def check_status(message_id)
-      self.class.get("/#{message_id}/messages", payload)
+      self.class.get("/messages/#{message_id}", payload)
     end
 
     def alert!(msg)
