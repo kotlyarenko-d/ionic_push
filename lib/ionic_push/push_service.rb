@@ -14,7 +14,7 @@ module IonicPush
     end
 
     def notify!
-      self.class.post('', payload)
+      self.class.post('/notifications', payload)
     end
 
     def check_status(message_id)
